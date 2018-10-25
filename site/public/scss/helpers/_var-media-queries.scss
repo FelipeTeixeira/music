@@ -1,0 +1,44 @@
+// Phone small - Extra small screen
+$phone-small-min:    360px;
+$phone-small-max:    359px;
+
+// Phone - Small screen
+$phone-min:        480px;
+$phone-max: 	   479px;
+
+// Phone - Small screen
+$phone-large-min: 600px;
+$phone-large-max: 599px;
+
+// Tablet - Small screen
+$tablet-min: 	768px;
+$tablet-max: 	767px;
+
+// Desktop - Medium screen
+$desktop: 	1200px;
+
+// NEW correta
+$breakpoints: (
+    "phone-small":  360px,
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 600px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      $desktop,
+    "desktop-wide": 1440px,
+    "desktop-wide-md": 1600px,
+    "desktop-wide-lg": 1920px,
+);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}

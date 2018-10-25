@@ -1,0 +1,98 @@
+$font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$black: #484848;
+$black: #555151;
+$black: #424242;
+
+$bg: #F8F5F5;
+$bg: #eff0f4;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+    font-family: $font;
+    background-color: $bg;
+}
+
+main {
+	min-height: calc(100vh - 66px);
+    position: relative;
+    padding: 70px 0;
+    display: block;
+
+    @media (min-width: $tablet-min) {
+        padding: 88px 0;
+    }
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+    color: #2189e0;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    text-align: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+input,
+textarea {
+    font-family: $font;
+    font-size: 16px;
+    color: $black;
+    background-color: #FFF;
+    width: 100%;
+    transition: border-color .2s ease;
+    border: 2px solid #FFF;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+::selection {
+    background: #212121;
+    color: #fff;
+}
+
+a,
+button {
+    > svg {
+        pointer-events: none;
+    }
+}
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    position: relative;
+}
