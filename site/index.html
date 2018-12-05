@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cifra</title>
     <link rel="stylesheet" href="public/css/app.css">
+    <meta name="description" lang="en" content="The first utility token with mass usability in the exchange of products and services. The best in the NFC (mobile proximity payments) transfer method model. The most elastic in his assignments."
+    />
+    <meta name="description" content="O primeiro utility token com usabilidade em massa na troca de produtos e serviços. O melhor no modelo de método de transferência NFC (pagamentos de proximidade móvel). O mais elástico em suas atribuições."
+    />
+    <meta property="og:title" content="Utility Token WiBX" />
+    <meta property="og:description" content="A criptomoeda que irá revolucionar as relações de troca." />
+    <meta property="og:description" lang="en_US" content="The cryptocurrency that will revolutionize the exchange relationships."
+    />
+
 </head>
 <body>
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -114,6 +123,11 @@
     </header>
 
     <main>
+
+        <div class="teste" onclick="facebook()">
+            sasa
+        </div>
+
         <div class="inputSearch-container">
             <input type="text" placeholder="Qual musica você deseja?" class="inputSearch">
             <svg class="icon icon-search">
@@ -121,9 +135,24 @@
             </svg>
         </div>
     </main>
+    <style>
+        .teste {
+            background: red;
+            max-width: 100px;
+            margin: auto;
+        }
+    </style>
     <script>
         function menu(params) {
             document.querySelector("body").classList.toggle("is-menu-active")
+        }
+
+        function facebook(params) {
+            var shareTextFacebook = "testa"
+            var shareLink = "https://felipeteixeira.github.io/music/site/";
+            const link = `https://www.facebook.com/sharer/sharer.php?u=${shareLink}?fb_locale=en_US&quote=${shareTextFacebook}`;
+
+            window.open(link, 'facebook-share', 'width=580,height=296');
         }
         
     </script>
